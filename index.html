@@ -3,49 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>黒ベースのホームページ</title>
+    <title>ポートフォリオ</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             background-color: #000;
             color: #fff;
             font-family: 'Segoe UI', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
         }
 
-        h1 {
-            font-size: 3em;
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            min-height: calc(100vh - 100px); /* ヘッダーとフッター分を除く */
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+            border-left: 1px solid #222;
+            border-right: 1px solid #222;
+        }
+
+            .column:first-child {
+                border-left: none;
+            }
+
+            .column:last-child {
+                border-right: none;
+            }
+
+        .section-title {
+            background-color: #333;
+            padding: 10px;
+            font-weight: bold;
             margin-bottom: 20px;
         }
 
-        p {
-            font-size: 1.2em;
-            color: #ccc;
+        .image-box {
+            background-color: #aaa;
+            color: #000;
+            margin: 10px auto;
+            text-align: center;
+            padding: 40px;
         }
 
-        .button {
-            margin-top: 30px;
-            padding: 12px 24px;
-            background-color: #1e1e1e;
-            color: #fff;
-            border: 1px solid #555;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+        .image-row {
+            display: flex;
+            justify-content: space-between;
         }
 
-            .button:hover {
-                background-color: #333;
+            .image-row .image-box {
+                flex: 1;
+                margin: 0 5px;
             }
+
+        .text-box {
+            background-color: #bbb;
+            color: #000;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <h1>ようこそ</h1>
-    <p>これは黒を基調としたシンプルなホームページです。</p>
-    <button class="button">詳しく見る</button>
+
+    <header>ヘッダー（共通）</header>
+
+    <div class="container">
+        <!-- 左カラム -->
+        <div class="column">
+            <div class="section-title">portfolio</div>
+            <div class="image-row">
+                <div class="image-box">game写真</div>
+                <div class="image-box">game写真</div>
+                <div class="image-box">game写真</div>
+            </div>
+            <div class="text-box">簡易的な内容の自己紹介</div>
+        </div>
+
+        <!-- 中央カラム -->
+        <div class="column">
+            <div class="section-title">Game title</div>
+            <div class="image-box">gameの概要</div>
+            <div class="image-row">
+                <div class="image-box">game写真</div>
+                <div class="image-box">game写真</div>
+            </div>
+        </div>
+
+        <!-- 右カラム -->
+        <div class="column">
+            <div class="section-title">profile</div>
+            <div class="image-box">自己紹介</div>
+            <div class="image-box">なにかしらの写真</div>
+            <div class="image-box">なにかしらの写真</div>
+        </div>
+    </div>
+
+    <footer>フッター（共通）</footer>
+
 </body>
 </html>
