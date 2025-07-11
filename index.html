@@ -1,11 +1,51 @@
-<html lang="ja" class="sf-js-enabled">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>世界よ、こんにちは</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黒ベースのホームページ</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #ccc;
+        }
+
+        .button {
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #1e1e1e;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+            .button:hover {
+                background-color: #333;
+            }
+    </style>
 </head>
 <body>
-    <div style="text-align:center;">
-        <img src="./img/image.png">
-    </div>
+    <h1>ようこそ</h1>
+    <p>これは黒を基調としたシンプルなホームページです。</p>
+    <button class="button">詳しく見る</button>
 </body>
 </html>
